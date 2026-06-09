@@ -1,10 +1,11 @@
 import './App.css'
+import Title from "./Title.tsx";
 
 function App() {
 
   return (
     <>
-
+      <Title />
     </>
   )
 }
