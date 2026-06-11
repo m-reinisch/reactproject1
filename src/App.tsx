@@ -9,7 +9,8 @@ function App() {
     <>
         <Header />
         <main>
-            <Article />
+            <Article titel={"Bester Ebbelwoi in Frankfurt"}
+                     subtitel={"Ebbelwoi-Locations"}/>
         </main>
         <Footer />
     </>

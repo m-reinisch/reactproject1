@@ -4,11 +4,17 @@ import LocationList from "./LocationList.tsx";
 import LikeButton from "./LikeButton.tsx";
 import DislikeButton from "./DislikeButton.tsx";
 
-export default function Article() {
+type ArticleProps= {
+    titel: string,
+    subtitel: string
+}
+
+export default function Article(props: Readonly<ArticleProps>) {
+
 
     return(
         <article>
-            <Title />
+            <Title titleEntry={props} />
             <Image />
             <LocationList />
             <LikeButton />
