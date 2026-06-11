@@ -1,7 +1,6 @@
 import Title from "./Title.tsx";
 import Image from "./Image.tsx";
-import LikeButton from "./LikeButton.tsx";
-import DislikeButton from "./DislikeButton.tsx";
+import Likes from "./Likes.tsx";
 import type {LocationsProps} from "./types.tsx";
 
 type ArticleProps= {
@@ -35,8 +34,7 @@ export default function Article(props: Readonly<ArticleEntry>) {
                 )}
             </ul>
             <p>Autor: {props.articleEntry.author}</p>
-            <LikeButton />
-            <DislikeButton />
+            <Likes />
         </article>
     )
 }
