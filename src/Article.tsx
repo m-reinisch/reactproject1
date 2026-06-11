@@ -7,16 +7,24 @@ import DislikeButton from "./DislikeButton.tsx";
 type ArticleProps= {
     titel: string,
     subtitel: string
+    image: string,
+    author: string
 }
 
-export default function Article(props: Readonly<ArticleProps>) {
+type ArticleEntry= {
+    articleEntry: ArticleProps
+}
 
+export default function Article(props: Readonly<ArticleEntry>) {
 
     return(
         <article>
-            <Title titleEntry={props} />
-            <Image />
+            <Title titel={props.articleEntry.titel}
+                   subtitel={props.articleEntry.subtitel}
+            />
+            <Image src={props.articleEntry.image} />
             <LocationList />
+            <p>Autor: {props.articleEntry.author}</p>
             <LikeButton />
             <DislikeButton />
         </article>

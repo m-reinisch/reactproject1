@@ -3,16 +3,12 @@ type TitleProps= {
     subtitel: string
 }
 
-type TitleEntry= {
-    titleEntry: TitleProps
-}
-
-export default function Title(props: Readonly<TitleEntry>) {
+export default function Title(props: Readonly<TitleProps>) {
 
     return(
         <>
-            <h1>{props.titleEntry.titel}</h1>
-            <h2>{props.titleEntry.subtitel}</h2>
+            <h1>{props.titel}</h1>
+            <h2>{props.subtitel}</h2>
         </>
     )
 }
