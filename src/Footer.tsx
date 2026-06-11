@@ -1,9 +1,10 @@
 export default function Footer() {
+    const today= new Date();
 
     return(
         <footer>
-            <p>Michael Reinisch</p>
-            <p>09.06.2026</p>
+            <p id="imp">Michael Reinisch</p>
+            <p id="dat">{today.toLocaleDateString()}</p>
         </footer>
     )
 }

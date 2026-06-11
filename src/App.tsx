@@ -1,12 +1,16 @@
 import './App.css'
-import Title from "./Title.tsx";
 import Footer from "./Footer.tsx";
+import Header from "./Header.tsx";
+import Article from "./Article.tsx";
 
 function App() {
 
   return (
     <>
-        <Title />
+        <Header />
+        <main>
+            <Article />
+        </main>
         <Footer />
     </>
   )
