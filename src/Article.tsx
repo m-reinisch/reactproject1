@@ -1,13 +1,14 @@
 import Title from "./Title.tsx";
 import Image from "./Image.tsx";
-import LocationList from "./LocationList.tsx";
 import LikeButton from "./LikeButton.tsx";
 import DislikeButton from "./DislikeButton.tsx";
+import type {LocationsProps} from "./types.tsx";
 
 type ArticleProps= {
     titel: string,
     subtitel: string
     image: string,
+    locations: LocationsProps[],
     author: string
 }
 
@@ -23,7 +24,16 @@ export default function Article(props: Readonly<ArticleEntry>) {
                    subtitel={props.articleEntry.subtitel}
             />
             <Image src={props.articleEntry.image} />
-            <LocationList />
+            <ul>
+                {props.articleEntry.locations.map(
+                    l =>
+                        <li>
+                            <a className="Anker" href={l.href} target="_blank">
+                                {l.location}
+                            </a>
+                        </li>
+                )}
+            </ul>
             <p>Autor: {props.articleEntry.author}</p>
             <LikeButton />
             <DislikeButton />
