@@ -1,9 +1,14 @@
-export default function Title() {
+type TitleProps= {
+    titel: string,
+    subtitel: string
+}
+
+export default function Title(props: Readonly<TitleProps>) {
 
     return(
         <>
-            <h1>Bester Ebbelwoi in Frankfurt</h1>
-            <h2>Ebbelwoi-Locations</h2>
+            <h1>{props.titel}</h1>
+            <h2>{props.subtitel}</h2>
         </>
     )
 }

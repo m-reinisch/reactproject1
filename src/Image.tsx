@@ -1,6 +1,10 @@
-export default function Image() {
+type ImageProps= {
+    src: string
+}
+
+export default function Image(props: Readonly<ImageProps>) {
 
     return(
-        <img src="src/assets/Apfelwein_Geripptes_Bembel.jpg" height="400" width="600" alt="Apfelweinglas und Bembel" />
+        <img src={props.src} height="400" width="600" alt="Apfelweinglas und Bembel" />
     )
 }
