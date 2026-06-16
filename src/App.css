@@ -7,6 +7,12 @@ header {
   justify-content: center;
 }
 
+article{
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+}
+
 img {
   height: 350px;
   width: 500px;
@@ -51,6 +57,7 @@ footer {
 
 .Anker {
   color: white;
+  background-color: orange;
 }
 
 #imp {
