@@ -1,7 +1,10 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 export default function Likes() {
     const [count, setCount]= useState<number>(0);
+    useEffect( () => {
+        console.log(count)
+    }, [count] )
     function changeCounter(like: boolean){
         if (like === true){
             setCount( count + 1 )
@@ -16,11 +19,7 @@ export default function Likes() {
         <>
             <p>Likes: {count}</p>
             <button type="button" onClick={
-                ()=> {
-                    changeCounter(true)
-                    console.log(count)
-                }
-            }>👍</button>
+                ()=> changeCounter(true)}>👍</button>
             <button type="button" onClick={
                 ()=> changeCounter(false)}>👎</button>
         </>
